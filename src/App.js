@@ -181,17 +181,11 @@ const App = ()=>{
                 }
               }else if(filter == "game") {
                 if(mov.Type == "game"){
-                  if(movies.length <= 0){
-                    return(
-                      <h1>no moive found</h1>
-                    )
-                  }else{
-                    return(
-                      <>
-                      <Box mov={mov}/>
-                      </>
-                    )
-                  }
+                  return(
+                    <>
+                    <Box mov={mov}/>
+                    </>
+                  )
                 }
               }
               
