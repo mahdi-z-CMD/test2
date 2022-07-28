@@ -148,6 +148,13 @@
 #filter:focus{
   border: 1px solid orange;
 }
+.error{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  align-items: center;
+  color: rgb(191, 19, 19);
+}
 /* -------------------  responsive part ----------------- */
 @media only screen and (max-width: 920px) {
   .searchbox input{

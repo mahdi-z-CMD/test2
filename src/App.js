@@ -152,6 +152,9 @@ const App = ()=>{
         </select>
         </div>
       </div>
+      <div className="error">
+      <h1 >Api is not working github bloking !!</h1>
+      </div>
       <div className="boxs">
         {
           backup.length > 0 ? (
