@@ -11,6 +11,7 @@ const App = ()=>{
     const req = await fetch(`${API_URL}&s=${title}`)
     const data = await req.json()
     setMovies(data.Search);
+    console.log(data.Search);
   }
   useEffect(() => {
    serachmovie(films[rand].name)
@@ -50,7 +51,45 @@ const App = ()=>{
       name : "mr nobody"
     }
   ]
-    
+  const backup = [
+    { 
+      Title: "Fight Club",
+      Poster: "https://m.media-amazon.com/images/M/MV5BNDIzNDU0YzEtYzE5Ni00ZjlkLTk5ZjgtNjM3NWE4YzA3Nzk3XkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_SX300.jpg",
+      Type: "movie",
+      Year: "1999",
+    },{ 
+      Title: "Superhero Fight Club",
+      Poster: "https://m.media-amazon.com/images/M/MV5BYzZjZDE1NTgtMTc4Yy00YzYxLWE1ZTItZjAzNzViOWFlNGNiXkEyXkFqcGdeQXVyMjU0OTAwMDc@._V1_SX300.jpg",
+      Type: "movie",
+      Year: "2015",
+    },{ 
+      Title: "Fight Club: Members Only",
+      Poster: "https://m.media-amazon.com/images/M/MV5BNWU5ZjA1OTQtMGE1MS00NWU3LThmYTEtMTI2ZjlhNzYxZjU5XkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_SX300.jpg",
+      Type: "movie",
+      Year: "2006",
+    },{ 
+      Title: "Superhero Fight Club 2.0",
+      Poster: "https://m.media-amazon.com/images/M/MV5BYTE3MGYxYzAtYzVhZi00NWIxLWFkNmQtMDBhOTZmZWI4MDU1XkEyXkFqcGdeQXVyNDA5ODU0NDg@._V1_SX300.jpg",
+      Type: "movie",
+      Year: "2016",
+    },{ 
+      Title: "Zombie Fight Club",
+      Poster: "https://m.media-amazon.com/images/M/MV5BYmY4YmE2NGUtNmJkOS00ZjFlLTg2NDYtZjdiYjRiZjdiZmE3XkEyXkFqcGdeQXVyMjAyNTEwOQ@@._V1_SX300.jpg",
+      Type: "movie",
+      Year: "2014",
+    },{ 
+      Title: "Jurassic Fight Club",
+      Poster: "https://m.media-amazon.com/images/M/MV5BMjEyMDY1MDg5OF5BMl5BanBnXkFtZTcwNjYyMTk3MQ@@._V1_SX300.jpg",
+      Type: "series",
+      Year: "2008",
+    },
+    { 
+      Title: "Fight Club",
+      Poster: "https://m.media-amazon.com/images/M/MV5BN2MyOGJiMzAtODEzYi00OWEyLTlkNzQtZDYzOGI5OGEzNmRlXkEyXkFqcGdeQXVyMTA1OTEwNjE@._V1_SX300.jpg",
+      Type: "game",
+      Year: "2004",
+    },
+  ]  
   const Box = ({ mov: { imdbID, Year, Poster, Title, Type } }) =>{
     return(
       <div className="box">
@@ -115,8 +154,8 @@ const App = ()=>{
       </div>
       <div className="boxs">
         {
-          movies.length > 0 ? (
-            movies.map((mov)=>{
+          backup.length > 0 ? (
+            backup.map((mov)=>{
               if (filter == "all") {
                 return(
                   <>
