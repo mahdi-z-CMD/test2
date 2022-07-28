@@ -1,0 +1,66 @@
+*,*::before,*::after {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    padding: 0;
+  }
+.bar{
+    background-color: #0e0f10;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.bar h1{
+    color: orange;
+}
+.bar nav ul{
+    list-style: none;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    position: relative;
+    left: 8%;
+}
+.contact{
+    width: 250px;
+}
+.bar nav ul li:not(:last-child){
+    margin-right: 10%;
+}
+.bar nav ul li a{
+    padding: 10px;
+    text-decoration: none;
+    transition: 0.3s all ease-in-out;
+    color: #eed0b9;
+}
+.active{
+    background-color: #080909;
+    border-radius: 10px;
+}
+.bar nav ul li a:hover{
+    background-color: #080909;
+    border-radius: 10px;
+    transition: 0.3s all ease-in-out;
+}
+.Login{
+    padding: 10px;
+    width: 5%;
+    border-radius: 10px;
+    background-color: #080909;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+    color: orange;
+}
+.Login:hover{
+    transition: 0.3s all ease-in-out;
+    background-color: orange;
+    color: #080909;
+}
+@media only screen and (max-width: 920px) {
+    .Login{
+        width: fit-content;
+    }
+}
